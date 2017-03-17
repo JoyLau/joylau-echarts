@@ -23,7 +23,6 @@ public class DataRange extends Basic<DataRange> implements Component {
     /**
      * 布局方式，默认为垂直布局，可选为：'horizontal' | 'vertical'
      *
-     * @see com.github.abel533.echarts.code.Orient
      */
     private Orient orient;
     /**
@@ -59,7 +58,7 @@ public class DataRange extends Basic<DataRange> implements Component {
      */
     private Boolean realtime;
     /**
-     * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
+     * 值域颜色标识，颜色数组长度必须大于等于2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
      */
     private List<String> color;
     /**
@@ -523,7 +522,7 @@ public class DataRange extends Basic<DataRange> implements Component {
     }
 
     /**
-     * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
+     * 值域颜色标识，颜色数组长度必须大于等于2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
      */
     public List<String> color() {
         if (this.color == null) {
@@ -533,7 +532,7 @@ public class DataRange extends Basic<DataRange> implements Component {
     }
 
     /**
-     * 值域颜色标识，颜色数组长度必须>=2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
+     * 值域颜色标识，颜色数组长度必须大于等于2，颜色代表从数值高到低的变化，即颜色数组低位代表数值高的颜色标识
      *
      * @param colors
      * @return

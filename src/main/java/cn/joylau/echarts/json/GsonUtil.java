@@ -124,8 +124,6 @@ public class GsonUtil {
     /**
      * 输出Json
      *
-     * @param object
-     * @return
      */
     public static void print(Object object) {
         System.out.println(format(object));
@@ -134,8 +132,6 @@ public class GsonUtil {
     /**
      * 输出Json
      *
-     * @param object
-     * @return
      */
     public static void printPretty(Object object) {
         System.out.println(prettyFormat(object));

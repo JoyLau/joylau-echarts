@@ -26,19 +26,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.joylau</groupId>
+    <groupId>cn.joylau.code</groupId>
     <artifactId>joylau-echarts</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>JoyLau-ECharts</name>
-    <description>ECharts3.0+版本的Java类库，实现了绝大部分ECharts中的Json结构对象</description>
-    <url>https://github.com/JoyLau</url>
+    <name>joylau-echarts</name>
+    <description>Configure the most attribute for ECharts3.0+ by Gson</description>
+    <url>http://code.joylau.cn</url>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
     <licenses>
         <license>
-            <name>The MIT License (MIT)</name>
-            <url>https://github.com/JoyLau/joylau-echarts/master/LICENSE</url>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
 
@@ -46,13 +52,14 @@
         <developer>
             <name>JoyLau</name>
             <email>2587038142@qq.com</email>
+            <url>http://joylau.cn</url>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:abel533/ECharts.git</connection>
-        <developerConnection>scm:git:git@github.com:abel533/ECharts.git</developerConnection>
-        <url>git@github.com:abel533/ECharts.git</url>
+        <connection>scm:git:git@github.com:JoyLau/joylau-echarts.git</connection>
+        <developerConnection>scm:git:git@github.com:JoyLau/joylau-echarts.git</developerConnection>
+        <url>git@github.com:JoyLau/joylau-echarts</url>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,13 +74,6 @@
             <version>2.5</version>
             <scope>compile</scope>
             <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -97,8 +97,8 @@
                     <plugin>
                         <artifactId>maven-compiler-plugin</artifactId>
                         <configuration>
-                            <source>1.6</source>
-                            <target>1.6</target>
+                            <source>1.7</source>
+                            <target>1.7</target>
                         </configuration>
                     </plugin>
                     <!-- Source -->
@@ -126,19 +126,16 @@
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
-                                <configuration>
-                                    <additionalparam>-Xdoclint:none</additionalparam>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- GPG mvn clean deploy -P release -Dgpg.passphrase=YourPassphase-->
+                    <!-- GPG -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
                         <executions>
                             <execution>
-                                <id>sign-artifacts</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>

@@ -115,7 +115,7 @@ public class Option implements Serializable {
      */
     private String calculableHolderColo;
     /**
-     * 数据合并名字间连接符,默认值'&'
+     * 数据合并名字间连接符,默认值''
      */
     private String nameConnector;
     /**

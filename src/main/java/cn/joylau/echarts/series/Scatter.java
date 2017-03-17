@@ -18,7 +18,7 @@ public class Scatter extends Series<Scatter> {
      */
     private Boolean large;
     /**
-     * 大规模阀值，large为true且数据量>largeThreshold才启用大规模模式
+     * 大规模阀值，large为true且数据量大于largeThreshold才启用大规模模式
      */
     private Long largeThreshold;
 

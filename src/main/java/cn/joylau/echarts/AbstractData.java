@@ -149,9 +149,6 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
         this.animationEasingUpdate = animationEasingUpdate;
     }
 
-    /**
-     * 获取data值
-     */
     public List data() {
         if (this.data == null) {
             this.data = new ArrayList();
@@ -162,8 +159,6 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     /**
      * 添加元素
      *
-     * @param values
-     * @return
      */
     public T data(Object... values) {
         if (values == null || values.length == 0) {
@@ -178,6 +173,7 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
 
     /**
      * 获取clickable值
+     * @return boolean
      */
     public Boolean clickable() {
         return this.clickable;
@@ -186,7 +182,6 @@ public abstract class AbstractData<T> implements Data<T>, java.io.Serializable {
     /**
      * 设置clickable值
      *
-     * @param clickable
      */
     public T clickable(Boolean clickable) {
         this.clickable = clickable;
