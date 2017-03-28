@@ -1,2 +1,2 @@
-#ECharts - Java类库
+#ECharts - Java-libs
 
